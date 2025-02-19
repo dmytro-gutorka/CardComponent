@@ -1,5 +1,5 @@
 @font-face {
-  src: url("/fonts/Fraunces9pt-Bold.woff2") format("woff2");
+  src: url("../fonts/Fraunces9pt-Bold.woff2") format("woff2");
   font-family: "Fraunces Bold";
   font-weight: bold;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-family: "Montserrat Bold";
   font-weight: bold;
   font-style: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
   font-family: "Montserrat Medium";
   font-weight: normal;
   font-style: normal;
@@ -101,6 +101,7 @@ body {
 }
 
 .card__price::after {
+  font-family: var(--font--montserrat_medium);
   color: var(--color-grey);
   content: "$169.99";
   text-decoration-line: line-through;
@@ -118,6 +119,10 @@ body {
   border-radius: 8px;
   padding: 1em;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .button:hover {
