@@ -30,9 +30,9 @@
   --color-dark_green: #1a4032;
   --color-light_green: #3d8168;
 
-  --font--fraunces_bold: "Fraunces Bold";
-  --font--montserrat_bold: "Montserrat Bold";
-  --font--montserrat_medium: "Montserrat Medium";
+  --font--fraunces_bold: "Fraunces Bold", sans-serif;
+  --font--montserrat_bold: "Montserrat Bold", sans-serif;
+  --font--montserrat_medium: "Montserrat Medium", sans-serif;
 }
 
 *,
@@ -44,5 +44,98 @@
 }
 
 body {
+  font-family: var(--font--montserrat_medium);
+  background-color: var(--color-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+.card__image {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.card__content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 28px;
+}
+
+.card__category {
+  color: var(--color-grey);
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 5px;
+}
+
+.card__title {
+  color: var(--color-black);
   font-family: var(--font--fraunces_bold);
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.card__desription {
+  color: var(--color-grey);
+  font-size: 14px;
+  line-height: 160%;
+}
+
+.card__price {
+  color: var(--color-light_green);
+  font-family: var(--font--fraunces_bold);
+  font-size: 32px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+}
+
+.card__price::after {
+  color: var(--color-grey);
+  content: "$169.99";
+  text-decoration-line: line-through;
+  font-size: 13px;
+  line-height: 120%;
+}
+
+.button {
+  color: var(--color-white);
+  background-color: var(--color-light_green);
+  font-family: var(--font--montserrat_bold);
+  font-size: 14px;
+  line-height: 110%;
+  border: none;
+  border-radius: 8px;
+  padding: 1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--color-dark_green);
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    min-width: 350px;
+    margin: 100px 10px;
+  }
+
+  .card__image {
+    border-radius: 10px 10px 0px 0px;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0% 10%;
+  }
 }
