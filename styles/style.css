@@ -1,0 +1,48 @@
+@font-face {
+  src: url("/fonts/Fraunces9pt-Bold.woff2") format("woff2");
+  font-family: "Fraunces Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: "Montserrat Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/Montserrat-Medium.woff2") format("woff2");
+  font-family: "Montserrat Medium";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-cream: #f2eae2;
+  --color-white: #ffffff;
+  --color-black: #1c232b;
+  --color-grey: #6c7289;
+  --color-dark_green: #1a4032;
+  --color-light_green: #3d8168;
+
+  --font--fraunces_bold: "Fraunces Bold";
+  --font--montserrat_bold: "Montserrat Bold";
+  --font--montserrat_medium: "Montserrat Medium";
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font--fraunces_bold);
+}
